@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class IncrementingDiamond {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = 4;
+        int num = 3;
+
+        // Upper Half
+        for(int i = 1; i <= n; i++) {
+
+            for(int j = 1; j <= n - i; j++)
+                System.out.print("  ");
+
+            for(int j = 1; j <= i; j++)
+                System.out.print(num + " ");
+
+            num++;
+            System.out.println();
+        }
+
+        num -= 2;
+
+        // Lower Half
+        for(int i = n - 1; i >= 1; i--) {
+
+            for(int j = 1; j <= n - i; j++)
+                System.out.print("  ");
+
+            for(int j = 1; j <= i; j++)
+                System.out.print(num + " ");
+
+            num--;
+            System.out.println();
+        }
+    }
+}
